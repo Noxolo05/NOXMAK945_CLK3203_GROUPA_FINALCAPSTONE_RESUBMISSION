@@ -46,7 +46,7 @@ function PodcastGrid({ height, width }) {
   const [favoritesData, setFavoritesData] = useState({});
   const [favoritesSortOption, setFavoritesSortOption] = useState('');
   const [isAudioPlayerVisible, setIsAudioPlayerVisible] = useState(false);
-  const [audioPlayerProgress, setAudioPlayerProgress] = useState(0);
+  const [setAudioPlayerProgress] = useState(0);
   const [lastListened, setLastListened] = useState({
     show: null,
     episode: null,
@@ -223,7 +223,7 @@ function PodcastGrid({ height, width }) {
 
   const handleEpisodePlay = (episode) => {
     if (episode && episode.id) {
-    const { id, show, season } = episode;
+    const { id, show } = episode;
 
     setLastListened({
       show: { id: show.id, title: show.title },
@@ -235,9 +235,6 @@ function PodcastGrid({ height, width }) {
   } else {
     console.error('Invalid episode data:', episode);
   }
-};
-
-  const handleAudioPlayerClose = () => {
     if (audioPlayerRef.current && !audioPlayerRef.current.paused) {
       const confirmClose = window.confirm("Audio is playing. Are you sure you want to close the page?");
       if (!confirmClose) {
