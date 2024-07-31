@@ -1,0 +1,75 @@
+.App {
+  overflow: hidden;
+  margin: 0 auto;
+  background-color: rgb(218, 39, 128);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 65px;
+  background: linear-gradient(90deg, #2f2fa5 1.18%, rgba(250, 8, 129, 0.4) 100%);
+  color: rgb(237, 240, 232);
+  padding: 15px;
+}
+
+.search--it{
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  font-size: 17px;
+  display: block;
+  margin: 0 auto;
+}
+
+.Favourite svg{
+  color: #1027d1;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  
+}
+
+.Favourite:hover svg {
+  
+  color: rgb(247, 96, 9)
+}
+
+.add-favourites svg {
+  color: #0b130d;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.add-favourites:hover svg {
+  color: rgb(250, 7, 80);
+}
+
+.trending {
+  text-align: center;
+  font-style: italic;
+  color: #392387;
+}
+
+.carousel--title{
+  text-align: left;
+  padding-left: 85px;
+}
+
+.show--image{
+  width: 250px;
+  height: 250px;
+}
+
+.show--title{
+  color: #CE5A67;
+}
+
+.show--desc{
+  color: #22092C;
+}
+
+.A-Z  {
+  padding: 10px;
+  background-color: #FAF6F0;
+  cursor: pointer;
+}
