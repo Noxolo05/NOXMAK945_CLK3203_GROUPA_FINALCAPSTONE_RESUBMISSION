@@ -46,13 +46,22 @@ function PodcastGrid({ height, width }) {
   const [favoritesData, setFavoritesData] = useState({});
   const [favoritesSortOption, setFavoritesSortOption] = useState('');
   const [isAudioPlayerVisible, setIsAudioPlayerVisible] = useState(false);
-  const [setAudioPlayerProgress] = useState(0);
+  const [audioPlayerProgress, setAudioPlayerProgress] = useState(0);
   const [lastListened, setLastListened] = useState({
     show: null,
     episode: null,
     timestamp: 0,
   });
   const audioPlayerRef = useRef(null);
+
+  useEffect(() => {
+    // example effect logic
+    console.log('effect running, audioplayerprogress:', audioPlayerProgress);
+    return () => {
+      console.log('cleaning up')
+    }
+  }
+  )
 
   useEffect(() => {
     // Load favorites from localStorage when the component mounts
